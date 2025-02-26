@@ -1,0 +1,10 @@
+<h1>All the restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <!--  to display the attribute name of the instance and not the instance-->
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant.id) %>
+    </li>
+  <% end %>
+</ul>
